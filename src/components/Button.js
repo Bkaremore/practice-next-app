@@ -7,7 +7,7 @@ const Button = ({title, onPress, customStyles}) => {
     <TouchableOpacity
       onPress={onPress}
       style={(customStyles && customStyles, styles.buttonContainer)}>
-      <Text>{title}</Text>
+      <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
   );
 };
@@ -20,5 +20,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 10,
+    borderRadius: 5
+  },
+  title: {
+    color: colors.white,
+    fontSize: 16
   },
 });

@@ -1,12 +1,15 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {NativeModules, StyleSheet, Text, View} from 'react-native';
 import SearchBar from '../components/SearchBar';
 import {colors} from '../stylesheet/variables';
+import globalStyles from '../stylesheet/global';
 
 const Home = () => {
+  const env = NativeModules.RNConfig.env;
   return (
-    <View style={styles.homeContainer}>
-      <SearchBar />
+    <View>
+      <Text>This is {env} env</Text>
+      {/* <SearchBar /> */}
     </View>
   );
 };
@@ -17,6 +20,6 @@ const styles = StyleSheet.create({
     padding: 20,
     height: '100%',
     width: '100%',
-    backgroundColor: colors.darkViolet,
+    // backgroundColor: colors.darkViolet,
   },
 });
